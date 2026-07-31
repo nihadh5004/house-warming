@@ -1,0 +1,26 @@
+import Hero from "./components/Hero";
+import InvitationCard from "./components/InvitationCard";
+import EventDetails from "./components/EventDetails";
+import Countdown from "./components/Countdown";
+import FamilySection from "./components/FamilySection";
+import LocationSection from "./components/LocationSection";
+import ShareInvitation from "./components/ShareInvitation";
+import Footer from "./components/Footer";
+import { invitation } from "./data/invitation";
+
+export default function App() {
+  return (
+    <main>
+      <Hero invitation={invitation} />
+      <div className="page-shell">
+        <InvitationCard invitation={invitation} />
+        <EventDetails invitation={invitation} />
+        <Countdown invitation={invitation} />
+        <FamilySection invitation={invitation} />
+        <LocationSection invitation={invitation} />
+        <ShareInvitation invitation={invitation} />
+      </div>
+      <Footer />
+    </main>
+  );
+}
