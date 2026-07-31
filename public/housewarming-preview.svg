@@ -1,76 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Housewarming invitation for Jasna and Shahina</title>
+  <desc id="description">An elegant ivory invitation framed by an Islamic arch, botanicals and gold details.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f9f4ed"/>
-      <stop offset=".55" stop-color="#eee7f1"/>
-      <stop offset="1" stop-color="#f7efea"/>
-    </linearGradient>
-    <radialGradient id="glow">
-      <stop offset="0" stop-color="#fffdf9" stop-opacity=".9"/>
-      <stop offset="1" stop-color="#fffdf9" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="pattern" width="64" height="64" patternUnits="userSpaceOnUse">
-      <path d="M32 5 59 32 32 59 5 32Z M32 17 47 32 32 47 17 32Z" fill="none" stroke="#806c7b" stroke-opacity=".1" stroke-width="1"/>
-      <circle cx="32" cy="32" r="3" fill="#b7985b" fill-opacity=".12"/>
-    </pattern>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#4e2947" flood-opacity=".13"/>
+    <style>
+      @font-face {
+        font-family: "Amiri Preview";
+        src: url("fonts/Amiri-Regular.ttf") format("truetype");
+      }
+      .serif { font-family: "Cormorant Garamond", Georgia, serif; }
+      .sans { font-family: Manrope, Arial, sans-serif; }
+      .arabic { font-family: "Amiri Preview", Amiri, "Noto Naskh Arabic", serif; }
+    </style>
+    <filter id="text-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#4e2947" flood-opacity="0.12"/>
     </filter>
-    <g id="flower">
-      <circle cx="0" cy="-17" r="16" fill="#d2a7b0"/>
-      <circle cx="16" cy="-5" r="16" fill="#d2a7b0"/>
-      <circle cx="10" cy="14" r="16" fill="#d2a7b0"/>
-      <circle cx="-10" cy="14" r="16" fill="#d2a7b0"/>
-      <circle cx="-16" cy="-5" r="16" fill="#d2a7b0"/>
-      <circle r="8" fill="#d8c293"/>
-    </g>
-    <g id="botanical">
-      <path d="M15 178C57 137 84 88 108 12M42 148c35-1 58-20 72-43M70 107c-4-24 3-46 21-66" fill="none" stroke="#68775f" stroke-width="2.5" stroke-linecap="round"/>
-      <ellipse cx="50" cy="145" rx="22" ry="10" fill="#9ba88f" transform="rotate(-28 50 145)"/>
-      <ellipse cx="79" cy="112" rx="22" ry="10" fill="#9a7a90" transform="rotate(34 79 112)"/>
-      <ellipse cx="96" cy="73" rx="20" ry="9" fill="#9ba88f" transform="rotate(-38 96 73)"/>
-      <use href="#flower" transform="translate(114 101)"/>
-      <use href="#flower" transform="translate(105 25) scale(.7)" opacity=".9"/>
-    </g>
   </defs>
 
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#pattern)"/>
-  <ellipse cx="600" cy="310" rx="430" ry="300" fill="url(#glow)"/>
+  <!-- This relative asset and the bundled font are inlined by scripts/generate-preview.mjs. -->
+  <image href="housewarming-preview-artwork.png" xlink:href="housewarming-preview-artwork.png" x="0" y="0" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
 
-  <rect x="31" y="31" width="1138" height="568" rx="4" fill="none" stroke="#b7985b" stroke-width="1.6"/>
-  <rect x="42" y="42" width="1116" height="546" rx="2" fill="none" stroke="#d1b97f" stroke-opacity=".75"/>
-  <path d="M57 94V57h37M1106 57h37v37M57 536v37h37M1106 573h37v-37" fill="none" stroke="#b7985b" stroke-width="2"/>
+  <!-- A translucent veil protects small-thumbnail legibility without hiding the paper texture. -->
+  <path d="M330 585V238C330 117 439 72 600 46c161 26 270 71 270 192v347Z" fill="#fffdf9" fill-opacity="0.36"/>
 
-  <g transform="translate(15 12) scale(1.15)">
-    <use href="#botanical"/>
+  <g text-anchor="middle">
+    <rect x="414" y="69" width="372" height="63" rx="31.5" fill="#fffdf9" fill-opacity="0.92" stroke="#d9c38e" stroke-width="1"/>
+    <text x="600" y="114" class="arabic" fill="#4e2947" font-size="34" direction="rtl" unicode-bidi="plaintext">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</text>
+
+    <g fill="none" stroke="#b89a5b" stroke-width="1.3">
+      <path d="M465 144h91M644 144h91"/>
+      <path d="m600 136 8 8-8 8-8-8Z" fill="#b89a5b"/>
+    </g>
+
+    <text x="600" y="184" class="sans" fill="#6f7d67" font-size="21" font-weight="600" letter-spacing="2.2">Housewarming Invitation</text>
+
+    <g filter="url(#text-shadow)">
+      <text x="600" y="301" class="serif" fill="#4e2947" font-size="84" font-weight="600">
+        <tspan>Jasna</tspan><tspan dx="16" fill="#b89a5b" font-size="52" font-style="italic">&amp;</tspan><tspan dx="16">Shahina</tspan>
+      </text>
+    </g>
+
+    <text x="600" y="364" class="serif" fill="#76546e" font-size="28" font-style="italic">
+      <tspan x="600">Our dreams and memories</tspan>
+      <tspan x="600" dy="31">have a new address</tspan>
+    </text>
+
+    <g transform="translate(600 426)" fill="none" stroke="#b89a5b" stroke-linecap="round">
+      <path d="M-76 0h55M21 0h55" stroke-width="1"/>
+      <path d="M-7 7V-3c0-11 14-19 14-30C7-22 21-14 21 0V7Z" stroke="#87957e" stroke-width="1.6"/>
+      <path d="M-1-8h8v15" stroke-width="1.4"/>
+      <circle cx="5" cy="1" r="1.5" fill="#b89a5b" stroke="none"/>
+    </g>
+
+    <text x="600" y="491" class="serif" fill="#4e2947" font-size="31" font-weight="600">16 August 2026</text>
+    <text x="600" y="529" class="sans" fill="#4e2947" font-size="18" font-weight="600" letter-spacing="1.8">After 5:00 PM</text>
   </g>
-  <g transform="translate(1185 618) rotate(180) scale(1.15)">
-    <use href="#botanical"/>
-  </g>
-
-  <g filter="url(#shadow)">
-    <path d="M343 548V235C343 93 457 72 600 72s257 21 257 163v313Z" fill="#fffdf9" fill-opacity=".82" stroke="#b7985b" stroke-width="1.8"/>
-    <path d="M360 548V240c0-125 98-150 240-150s240 25 240 150v308" fill="none" stroke="#d7c497" stroke-width="1"/>
-  </g>
-
-  <text x="600" y="145" text-anchor="middle" fill="#4e2947" font-family="Amiri, 'Noto Naskh Arabic', serif" font-size="34" direction="rtl" unicode-bidi="bidi-override">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</text>
-  <line x1="475" y1="170" x2="565" y2="170" stroke="#b7985b"/>
-  <path d="m600 164 7 7-7 7-7-7Z" fill="#b7985b"/>
-  <line x1="635" y1="170" x2="725" y2="170" stroke="#b7985b"/>
-
-  <text x="600" y="212" text-anchor="middle" fill="#68775f" font-family="Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="4">HOUSEWARMING INVITATION</text>
-  <text x="600" y="303" text-anchor="middle" fill="#4e2947" font-family="Georgia, serif" font-size="74">Jasna <tspan fill="#b7985b" font-size="46" font-style="italic">&amp;</tspan> Shahina</text>
-  <text x="600" y="344" text-anchor="middle" fill="#73526b" font-family="Georgia, serif" font-size="24" font-style="italic">Our dreams and memories have a new address</text>
-
-  <g transform="translate(600 390)">
-    <path d="M-22 33V-4c0-24 44-24 44 0v37Z" fill="none" stroke="#8d9c82" stroke-width="2"/>
-    <path d="M-14 33V2c0-15 28-15 28 0v31" fill="none" stroke="#b7985b" stroke-width="1.5"/>
-    <circle cx="8" cy="19" r="2.5" fill="#b7985b"/>
-    <path d="M0-13v-11m-5 5 5-5 5 5" fill="none" stroke="#b7985b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-
-  <text x="600" y="472" text-anchor="middle" fill="#4e2947" font-family="Georgia, serif" font-size="28" font-weight="600">16 August 2026</text>
-  <text x="600" y="504" text-anchor="middle" fill="#4e2947" font-family="Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="2">AFTER 5:00 PM</text>
-  <text x="600" y="560" text-anchor="middle" fill="#73526b" font-family="Amiri, 'Noto Naskh Arabic', serif" font-size="25" direction="rtl">أَهْلًا وَسَهْلًا</text>
 </svg>
