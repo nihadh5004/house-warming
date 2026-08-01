@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import InvitationCard from "./components/InvitationCard";
 import EventDetails from "./components/EventDetails";
+import HomeGallery from "./components/HomeGallery";
 import Countdown from "./components/Countdown";
 import FamilySection from "./components/FamilySection";
 import LocationSection from "./components/LocationSection";
@@ -15,6 +16,7 @@ export default function App() {
       <div className="page-shell">
         <InvitationCard invitation={invitation} />
         <EventDetails invitation={invitation} />
+        <HomeGallery />
         <Countdown invitation={invitation} />
         <FamilySection invitation={invitation} />
         <LocationSection invitation={invitation} />

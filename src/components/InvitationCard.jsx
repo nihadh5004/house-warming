@@ -18,14 +18,12 @@ export default function InvitationCard({ invitation }) {
             <span />
           </div>
           <p className="script-line">With gratitude to Allah,</p>
-          <p>We warmly invite you to the housewarming of</p>
+          <p>{firstHost} & {secondHost} warmly invite you to the housewarming of</p>
           <h2>
-            {firstHost}
-            <span>&amp;</span>
-            {secondHost}
+            Alora
           </h2>
           <p className="card-tagline">
-            Our dreams and memories have a new address.
+            Alhamdulillah, Our dreams and memories have a new address.
           </p>
           <p>
             Please join us as we begin this beautiful new chapter with our
