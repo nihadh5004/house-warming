@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import nasheed from "../music/ADIL_AMEEN_-_SHUKRAN_LAKA_RABBI_(mp3.pm).mp3";
+import nasheed from "../Music/ADIL_AMEEN_-_SHUKRAN_LAKA_RABBI_(mp3.pm).mp3";
 
 export default function BackgroundAudio() {
   const audioRef = useRef(null);
