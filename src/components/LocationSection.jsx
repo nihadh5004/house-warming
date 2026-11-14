@@ -1,25 +1,25 @@
 export default function LocationSection({ invitation }) {
   return (
-    <section className="section location-section reveal" aria-labelledby="location-title">
-      <div className="location-arch">
-        <div className="door" aria-hidden="true">
-          <span className="door-star">✦</span>
-          <i />
-        </div>
-        <div className="location-copy">
-          <p className="section-kicker">Come celebrate with us</p>
-          <h2 id="location-title">{invitation.venueName}</h2>
-          <p>Tap below for directions</p>
-          <a
-            className="button button--primary"
-            href={invitation.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open in Google Maps
-          </a>
-        </div>
+    <section className="location-section section shell grid-12" id="location" aria-labelledby="location-title">
+      <div className="location-heading reveal">
+        <p className="eyebrow">Find us</p>
+        <h2 id="location-title">We’ll be waiting<br />for you.</h2>
       </div>
+      <div className="location-copy reveal">
+        <p className="location-name">{invitation.venueName}</p>
+        <address>{invitation.locality}<br />{invitation.region}</address>
+        <a className="text-link" href={invitation.mapsUrl} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+      </div>
+      {invitation.mapsEmbedUrl && (
+        <iframe
+          className="location-map"
+          title={`Map showing ${invitation.venueName}`}
+          src={invitation.mapsEmbedUrl}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      )}
     </section>
   );
 }

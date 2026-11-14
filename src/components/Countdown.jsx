@@ -1,35 +1,25 @@
-import { useEffect, useMemo, useState } from "react";
-
-function getRemaining(target) {
-  const distance = target.getTime() - Date.now();
-  if (distance <= 0) return null;
-  return {
-    days: Math.floor(distance / 86400000),
-    hours: Math.floor((distance / 3600000) % 24),
-    minutes: Math.floor((distance / 60000) % 60),
-    seconds: Math.floor((distance / 1000) % 60)
-  };
-}
+import { useEffect, useState } from "react";
+import { getRemaining } from "../data/eventUtils";
 
 export default function Countdown({ invitation }) {
-  const target = useMemo(
-    () => new Date(`${invitation.eventDate}T${invitation.eventTime}:00`),
-    [invitation.eventDate, invitation.eventTime]
-  );
-  const [remaining, setRemaining] = useState(() => getRemaining(target));
+  const [remaining, setRemaining] = useState(() => getRemaining(invitation.eventStart));
 
   useEffect(() => {
-    const timer = window.setInterval(() => setRemaining(getRemaining(target)), 1000);
+    const update = () => {
+      const next = getRemaining(invitation.eventStart);
+      setRemaining(next);
+      if (!next) window.clearInterval(timer);
+    };
+    const timer = window.setInterval(update, 1000);
+    update();
     return () => window.clearInterval(timer);
-  }, [target]);
+  }, [invitation.eventStart]);
 
   return (
-    <section className="section countdown-section reveal" aria-labelledby="countdown-title">
-      <div className="crescent-mark" aria-hidden="true"><span>✦</span></div>
-      <p className="section-kicker">Until we welcome you</p>
-      <h2 id="countdown-title">Our new chapter begins in</h2>
+    <section className="countdown-section shell section reveal" aria-labelledby="countdown-title">
+      <h2 className="eyebrow" id="countdown-title">Until we open our doors</h2>
       {remaining ? (
-        <div className="countdown-grid" aria-live="polite">
+        <div className="countdown-grid" role="timer" aria-label="Time until the housewarming" aria-live="off">
           {Object.entries(remaining).map(([label, value]) => (
             <div className="countdown-unit" key={label}>
               <strong>{String(value).padStart(2, "0")}</strong>
@@ -38,9 +28,7 @@ export default function Countdown({ invitation }) {
           ))}
         </div>
       ) : (
-        <p className="countdown-complete">
-          Alhamdulillah, our new chapter has begun.
-        </p>
+        <p className="countdown-complete" role="status">Our new chapter has begun.<span>Thank you for being part of our story.</span></p>
       )}
     </section>
   );

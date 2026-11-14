@@ -1,56 +1,16 @@
-import exteriorAerial from "../images/house_img_1.webp";
-import diningInterior from "../images/house_img_2.webp";
-import exteriorFront from "../images/house_img_3.webp";
-
-const views = [
-  {
-    image: exteriorFront,
-    alt: "Front exterior view of Alora",
-    caption: "A place to call home",
-  },
-  {
-    image: exteriorAerial,
-    alt: "Elevated exterior view of Alora",
-    caption: "Our new address",
-  },
-  {
-    image: diningInterior,
-    alt: "Warm modern dining interior at Alora",
-    caption: "Made for togetherness",
-  },
-];
-
-export default function HomeGallery() {
+export default function HomeGallery({ invitation }) {
   return (
-    <section className="section home-gallery reveal" aria-labelledby="home-gallery-title">
-      <div className="home-gallery-header">
-        <div>
-          <p className="section-kicker">Our new beginning</p>
-          <h2 id="home-gallery-title">A glimpse of Alora</h2>
+    <section className="home-gallery" id="gallery" aria-labelledby="gallery-title">
+      <div className="showcase-heading shell reveal">
+        <h2 id="gallery-title">A place to belong.</h2>
+        <span className="micro-label">Architecture for a life together</span>
+      </div>
+      <figure className="home-showcase reveal">
+        <div className="home-gallery-image">
+          <img src={invitation.houseImage} alt={`A closer view of ${invitation.venueName}, its balconies, rooflines, and garden`} width="1280" height="720" loading="lazy" decoding="async" />
         </div>
-        <p>Thoughtfully made, ready for memories.</p>
-      </div>
-
-      <div className="home-gallery-grid">
-        {views.map((view, index) => (
-          <figure className="home-gallery-card" key={view.image}>
-            <div className="home-gallery-image">
-              <img
-                src={view.image}
-                alt={view.alt}
-                loading="lazy"
-                decoding="async"
-              />
-              <span aria-hidden="true">0{index + 1}</span>
-            </div>
-            <figcaption>{view.caption}</figcaption>
-          </figure>
-        ))}
-      </div>
-
-      <p className="home-gallery-swipe" aria-hidden="true">
-        Swipe to explore <span>→</span>
-      </p>
+        <figcaption className="shell"><span>{invitation.venueName} / A place to belong</span><span>A home, thoughtfully made.</span></figcaption>
+      </figure>
     </section>
   );
 }

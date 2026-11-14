@@ -6,31 +6,33 @@ export default function BackgroundAudio() {
 
   useEffect(() => {
     const audio = audioRef.current;
-
-    if (!audio) return undefined;
-
     audio.volume = 0.35;
 
     const startPlayback = () => {
-      audio.play().then(removeInteractionListeners).catch(() => {});
+      if (audio.paused) {
+        // Browsers may require a user gesture before allowing audible playback.
+        audio.play().catch(() => {});
+      }
     };
 
     const removeInteractionListeners = () => {
       document.removeEventListener("pointerdown", startPlayback);
+      document.removeEventListener("touchend", startPlayback);
       document.removeEventListener("keydown", startPlayback);
-      document.removeEventListener("touchstart", startPlayback);
     };
 
-    startPlayback();
-    document.addEventListener("pointerdown", startPlayback);
+    audio.addEventListener("playing", removeInteractionListeners);
+    document.addEventListener("pointerdown", startPlayback, { passive: true });
+    document.addEventListener("touchend", startPlayback, { passive: true });
     document.addEventListener("keydown", startPlayback);
-    document.addEventListener("touchstart", startPlayback);
+    startPlayback();
 
     return () => {
       removeInteractionListeners();
+      audio.removeEventListener("playing", removeInteractionListeners);
       audio.pause();
     };
   }, []);
 
-  return <audio ref={audioRef} src={nasheed} autoPlay loop preload="auto" />;
+  return <audio ref={audioRef} src={nasheed} autoPlay loop preload="auto" aria-hidden="true" />;
 }
