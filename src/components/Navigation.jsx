@@ -29,7 +29,7 @@ export default function Navigation({ invitation }) {
           aria-controls="main-nav"
           onClick={() => setOpen(!open)}
         >
-          {open ? "Close" : "Menu"}<span aria-hidden="true">{open ? "−" : "+"}</span>
+          {open ? "Close" : "Explore"}<span aria-hidden="true">{open ? "−" : "+"}</span>
         </button>
         <nav id="main-nav" className={`nav-links${open ? " is-open" : ""}`} aria-label="Main navigation">
           {links.map(([label, id]) => (

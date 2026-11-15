@@ -57,6 +57,7 @@ try {
     await evaluate("window.coverAudio = document.querySelector('audio'); true");
     const coverScreenshot = await cdp("Page.captureScreenshot", { format: "png" });
     await writeFile(`artifacts/cover-${name}.png`, Buffer.from(coverScreenshot.data, "base64"));
+    await evaluate("document.querySelector('.invitation-home-button').scrollIntoView({block:'center',behavior:'instant'})");
     const button = await evaluate("(() => { const r = document.querySelector('.invitation-home-button').getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2}; })()");
     await cdp("Input.dispatchMouseEvent", { type: "mousePressed", ...button, button: "left", clickCount: 1 });
     await cdp("Input.dispatchMouseEvent", { type: "mouseReleased", ...button, button: "left", clickCount: 1 });
