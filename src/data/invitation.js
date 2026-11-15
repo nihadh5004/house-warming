@@ -18,5 +18,5 @@ export const invitation = {
   websiteUrl: "",
   houseImage: "/housewarming-preview.jpeg",
   secondHouseImage: "/whiteaura-second.jpeg",
-  familyMembers: ["Aliyar", "Ayisha", "Ajwa Ayisha", "Ramin Ali", "Rajeeb", "Ranessha"]
+  familyMembers: ["Aliyar", "Ayisha", "Ajwa Ayisha", "Ramin Ali", "Rajeeb", "Raneesha"]
 };

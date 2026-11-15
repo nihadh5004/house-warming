@@ -9,7 +9,13 @@ export default function HomeGallery({ invitation }) {
         <div className="home-gallery-image">
           <img src={invitation.secondHouseImage} alt={`Another view of ${invitation.venueName}, with its entrance, carport, and landscaped garden`} width="1280" height="720" loading="lazy" decoding="async" />
         </div>
-        <figcaption className="shell"><span>{invitation.venueName} / A place to belong</span><span>A project by Hatchwhite</span></figcaption>
+        <figcaption className="shell">
+          <span>{invitation.venueName} / A place to belong</span>
+          <span className="project-credit">
+            <span>A project by</span>
+            <img className="project-credit-logo" src="/hatchwhite.jpeg" alt="Hatchwhite" width="1600" height="551" loading="lazy" decoding="async" />
+          </span>
+        </figcaption>
       </figure>
     </section>
   );
