@@ -17,5 +17,6 @@ export const invitation = {
   // Leave empty to share the current page URL, or set the public invitation URL.
   websiteUrl: "",
   houseImage: "/housewarming-preview.jpeg",
-  familyMembers: ["Aliyar", "Ayisha", "Ajwa Ayisha", "Ramin Ali"]
+  secondHouseImage: "/whiteaura-second.jpeg",
+  familyMembers: ["Aliyar", "Ayisha", "Ajwa Ayisha", "Ramin Ali", "Rajeeb", "Ranessha"]
 };

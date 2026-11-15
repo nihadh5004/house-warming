@@ -4,7 +4,7 @@ export default function Hero({ invitation }) {
       <div className="hero-heading">
         <div className="hero-title-group">
           <p className="eyebrow">A new beginning</p>
-          <h1 id="hero-title">
+          <h1 id="hero-title" tabIndex={-1}>
             {invitation.venueName.split(" ").map((word, index, words) => (
               <span className="hero-word" key={`${word}-${index}`}>
                 {index > 0 && " "}{word}{index === words.length - 1 && <span className="hero-period">.</span>}

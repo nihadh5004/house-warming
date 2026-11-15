@@ -18,7 +18,7 @@ Configuration:
 - `websiteUrl` optionally overrides the current page URL when sharing. Once deployed, the current public URL works automatically.
 - In `index.html`, set the `og:image` and `twitter:image` URLs to absolute URLs on the final public domain for reliable social preview support. An old, unrelated canonical domain has been removed.
 
-The hero, architectural showcase, and social-sharing metadata all use the uploaded `public/housewarming-preview.jpeg`. No stock house or interior imagery is displayed. The current design follows a modern architectural editorial direction: off-white and stone surfaces, charcoal typography, sage accents, a 12-column grid, and full-width photography.
+The hero and social-sharing metadata use `public/housewarming-preview.jpeg`; the second architectural showcase uses `public/whiteaura-second.jpeg` with a subtle Hatchwhite project credit. The current design follows a modern architectural editorial direction: light beige and muted sage surfaces, warm charcoal typography, a 12-column grid, and full-width photography.
 
 Background audio plays automatically on a loop without visible controls. If a browser blocks audible autoplay, playback starts on the first tap or key press. Sticky navigation and buttons support keyboard use. Scroll reveals and initial image reveals respect reduced motion. The location section shows the confirmed location map and directions link; WhatsApp invitations include the same exact location link.
 

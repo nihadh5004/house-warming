@@ -5,12 +5,12 @@
 }
 
 :root {
-  --paper: #f6f5f1;
-  --stone: #e8e5df;
-  --ink: #242725;
-  --muted: #777b75;
-  --sage: #68766a;
-  --line: #d8d7d1;
+  --paper: #f4ecdf;
+  --stone: #dfe0d0;
+  --ink: #30372f;
+  --muted: #706d61;
+  --sage: #657158;
+  --line: #d5cbb9;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Manrope', Arial, sans-serif;
   color: var(--ink);
@@ -88,9 +88,55 @@ h2 { font-size: clamp(52px, 5.6vw, 84px); line-height: .99; letter-spacing: -.04
 .text-link > span { font-size: 21px; }
 .text-link:hover { color: var(--sage); border-color: var(--sage); }
 
+/* Invitation cover, inspired by the original opening design. */
+.invitation-home {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(36px, 7vw, 100px);
+  background: linear-gradient(90deg, #f4ecdff5 0%, #f4ecdfdc 42%, #f4ecdf5c 100%), url('/housewarming-hero.webp') center / cover;
+}
+.invitation-home-layout { display: grid; grid-template-columns: minmax(0, 1fr) 190px; align-items: center; gap: 70px; width: min(1180px, 100%); }
+.invitation-home-copy { padding: 14px 0 14px clamp(22px, 3vw, 42px); border-left: 1px solid #b7985b99; }
+.invitation-home-blessing { margin-bottom: 35px; }
+.invitation-home-blessing p:first-child { width: fit-content; color: #4e2947; font: 400 clamp(24px, 2.4vw, 34px)/1.6 Amiri, serif; }
+.invitation-home-blessing p:last-child { color: #746961; font: italic 16px/1.5 var(--serif); }
+.invitation-home-kicker { color: #63715b; font: italic clamp(19px, 2vw, 26px)/1.4 var(--serif); }
+.invitation-home h1 { margin-top: 18px; color: #433b36; font-size: clamp(72px, 8.5vw, 132px); letter-spacing: -.04em; line-height: .95; }
+.invitation-home-hosts { margin-top: 28px; color: #4e2947; font: 500 clamp(28px, 3vw, 40px)/1.2 var(--serif); }
+.invitation-home-note { margin-top: 10px; color: #5f5650; font: 20px/1.5 var(--serif); }
+.invitation-home-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 38px; min-height: 54px; margin-top: 32px; padding: 16px 26px; color: var(--paper); background: #63715b; border: 1px solid #63715b; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .2s; }
+.invitation-home-button:hover { background: #4c5945; }
+.invitation-home-button span { font-size: 20px; }
+.invitation-home-location { margin-top: 26px; color: #5f5650; font-size: 10px; line-height: 1.8; letter-spacing: .06em; }
+.invitation-home-date { padding: 36px 18px; border: 1px solid #b7985b99; background: #f4ecdfeb; color: #443c37; text-align: center; box-shadow: 0 24px 60px #443c371a; }
+.invitation-home-date time { display: flex; flex-direction: column; align-items: center; }
+.invitation-home-day { font: 500 96px/.9 var(--serif); letter-spacing: -.06em; }
+.invitation-home-month { margin-top: 16px; color: #63715b; font-size: 19px; letter-spacing: .22em; text-transform: uppercase; }
+.invitation-home-year { margin-top: 6px; font: 24px/1.2 var(--serif); letter-spacing: .12em; }
+.invitation-home-date-rule { display: block; width: 38px; height: 1px; margin: 24px auto; background: #b7985b99; }
+.invitation-home-date > p { font: 19px/1.5 var(--serif); }
+.invitation-home-date > p > span { display: block; margin-top: 10px; color: #746961; font: 9px/1.6 var(--sans); }
+@media (max-width: 760px) {
+  .invitation-home { padding: 40px 24px; background-image: linear-gradient(180deg, #f4ecdfed, #f4ecdfb3), url('/housewarming-hero.webp'); background-position: 59% center; }
+  .invitation-home-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .invitation-home-copy { padding-left: 20px; }
+  .invitation-home-blessing { margin-bottom: 28px; }
+  .invitation-home h1 { font-size: clamp(58px, 14vw, 100px); }
+  .invitation-home-note { font-size: 18px; }
+  .invitation-home-location { font-size: 9px; }
+  .invitation-home-date { display: flex; justify-content: center; align-items: center; gap: 22px; padding: 20px 14px; }
+  .invitation-home-day { font-size: 60px; }
+  .invitation-home-month { margin-top: 8px; font-size: 12px; }
+  .invitation-home-year { font-size: 17px; }
+  .invitation-home-date-rule { width: 1px; height: 65px; margin: 0; flex-shrink: 0; }
+  .invitation-home-date > p { font-size: 18px; }
+}
+
 /* Navigation / quiet, persistent architectural index. */
 .site-header { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); transition: background .3s; }
-.site-header.is-scrolled { background: #eeede7f5; }
+.site-header.is-scrolled { background: #eee3d2f5; }
 .nav-shell { min-height: 88px; display: flex; justify-content: space-between; align-items: center; gap: 40px; }
 .brand { text-transform: uppercase; font-size: 15px; font-weight: 600; letter-spacing: .24em; text-decoration: none; white-space: nowrap; }
 .nav-links { display: flex; gap: 35px; margin-left: auto; }
@@ -165,7 +211,7 @@ h2 { font-size: clamp(52px, 5.6vw, 84px); line-height: .99; letter-spacing: -.04
 .showcase-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; padding-bottom: 34px; }
 .showcase-heading h2 { font-size: clamp(43px, 4.4vw, 66px); }
 .showcase-heading .micro-label { padding-bottom: 5px; }
-.home-gallery-image { overflow: hidden; aspect-ratio: 2 / 1; background: var(--stone); }
+.home-gallery-image { overflow: hidden; aspect-ratio: 16 / 9; background: var(--stone); }
 .home-gallery-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; display: block; transition: transform 1.2s cubic-bezier(.2,.65,.2,1); }
 @media (hover: hover) { .home-showcase:hover img { transform: scale(1.015); } }
 .home-showcase figcaption { color: #626760; padding-top: 20px; }
