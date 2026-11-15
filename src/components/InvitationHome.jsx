@@ -16,7 +16,7 @@ export default function InvitationHome({ invitation }) {
           <p className="invitation-home-hosts">{invitation.hosts.join(" & ")}</p>
           <p className="invitation-home-note">Our dreams and memories have a new address.</p>
           <a className="invitation-home-button" href="#top">
-            View invitation <span aria-hidden="true">↗</span>
+            View invitation
           </a>
           <p className="invitation-home-location">{invitation.locality} · {invitation.region}</p>
         </div>

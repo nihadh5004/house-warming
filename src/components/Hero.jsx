@@ -28,7 +28,7 @@ export default function Hero({ invitation }) {
       </figure>
       <div className="mobile-hero-details">
         <div><span className="micro-label">Save the evening</span><time dateTime={invitation.eventDate}>{invitation.displayDate}</time></div>
-        <a className="text-link" href="#invitation">The invitation <span aria-hidden="true">↗</span></a>
+        <a className="text-link" href="#invitation">The invitation</a>
       </div>
     </section>
   );

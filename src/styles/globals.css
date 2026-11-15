@@ -106,9 +106,8 @@ h2 { font-size: clamp(52px, 5.6vw, 84px); line-height: .99; letter-spacing: -.04
 .invitation-home h1 { margin-top: 18px; color: #433b36; font-size: clamp(72px, 8.5vw, 132px); letter-spacing: -.04em; line-height: .95; }
 .invitation-home-hosts { margin-top: 28px; color: #4e2947; font: 500 clamp(28px, 3vw, 40px)/1.2 var(--serif); }
 .invitation-home-note { margin-top: 10px; color: #5f5650; font: 20px/1.5 var(--serif); }
-.invitation-home-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 38px; min-height: 54px; margin-top: 32px; padding: 16px 26px; color: var(--paper); background: #63715b; border: 1px solid #63715b; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .2s; }
+.invitation-home-button { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; margin-top: 32px; padding: 16px 26px; color: var(--paper); background: #63715b; border: 1px solid #63715b; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .2s; }
 .invitation-home-button:hover { background: #4c5945; }
-.invitation-home-button span { font-size: 20px; }
 .invitation-home-location { margin-top: 26px; color: #5f5650; font-size: 10px; line-height: 1.8; letter-spacing: .06em; }
 .invitation-home-date { padding: 36px 18px; border: 1px solid #b7985b99; background: #f4ecdfeb; color: #443c37; text-align: center; box-shadow: 0 24px 60px #443c371a; }
 .invitation-home-date time { display: flex; flex-direction: column; align-items: center; }
