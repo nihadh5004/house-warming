@@ -156,6 +156,7 @@ h2 { font-size: clamp(52px, 5.6vw, 84px); line-height: .99; letter-spacing: -.04
 .hero-title-group { grid-column: span 9; animation: headline-enter 1s cubic-bezier(.2,.65,.2,1) both; }
 .hero-title-group .eyebrow { margin-bottom: 18px; }
 .hero h1 { font-size: clamp(90px, 12.5vw, 200px); letter-spacing: -.065em; line-height: .85; white-space: nowrap; }
+.hero h1:focus { outline: none; }
 .hero-period, .sage-period { color: var(--sage); }
 .mobile-hero-details { display: none; }
 .hero-note { grid-column: span 3; padding-bottom: 2px; }

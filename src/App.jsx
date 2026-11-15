@@ -39,6 +39,7 @@ function InvitationPage() {
     <>
       <a className="skip-link" href="#invitation">Skip to invitation</a>
       <Navigation invitation={invitation} />
+      <BackgroundAudio />
       <main>
         <Hero invitation={invitation} />
         <Introduction invitation={invitation} />
@@ -69,7 +70,6 @@ export default function App() {
 
   return (
     <>
-      <BackgroundAudio />
       {opened ? <InvitationPage /> : <InvitationHome invitation={invitation} />}
     </>
   );

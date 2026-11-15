@@ -20,7 +20,7 @@ Configuration:
 
 The hero and social-sharing metadata use `public/housewarming-preview.jpeg`; the second architectural showcase uses `public/whiteaura-second.jpeg` with a subtle Hatchwhite project credit. The current design follows a modern architectural editorial direction: light beige and muted sage surfaces, warm charcoal typography, a 12-column grid, and full-width photography.
 
-Background audio plays automatically on a loop without visible controls. If a browser blocks audible autoplay, playback starts on the first tap or key press. Sticky navigation and buttons support keyboard use. Scroll reveals and initial image reveals respect reduced motion. The location section shows the confirmed location map and directions link; WhatsApp invitations include the same exact location link.
+The opening cover is silent. Background audio starts on the inner invitation page and loops without visible controls; returning to the cover stops playback. If a browser blocks audible autoplay, playback starts on the first tap or key press. Sticky navigation and buttons support keyboard use. Scroll reveals and initial image reveals respect reduced motion. The location section shows the confirmed location map and directions link; WhatsApp invitations include the same exact location link.
 
 This project has no configured lint script. Production validation uses `npm run build`.
 
